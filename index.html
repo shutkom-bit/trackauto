@@ -168,9 +168,16 @@ ul, ol { padding: 0; list-style: none; }
 .console__body { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 14px; }
 .console__map { height: 330px; background: #243039; overflow: hidden; }
 .console__map svg { width: 100%; height: 100%; display: block; }
-.route { stroke: var(--accent); }
-.pin circle:first-child { fill: var(--accent); fill-opacity: .18; }
-.pin circle:last-child { fill: var(--accent); }
+.route { stroke: #0D8AE3; stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 4px rgba(13, 138, 227, .6)); }
+.pin__dot { fill: #2EE87A; filter: drop-shadow(0 0 5px rgba(46, 232, 122, .8)); }
+.pin__halo { fill: #2EE87A; fill-opacity: .16; }
+.pin__ping { fill: none; stroke: #2EE87A; stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; animation: pin-ping 2.4s ease-out infinite; }
+.pin--1 .pin__ping { animation-delay: .8s; }
+.pin--2 .pin__ping { animation-delay: 1.6s; }
+@keyframes pin-ping { 0% { opacity: .9; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(3.6); } }
+.status i { background: #2EE87A; box-shadow: 0 0 0 0 rgba(46, 232, 122, .7); animation: status-pulse 2.4s ease-out infinite; }
+@keyframes status-pulse { 0% { box-shadow: 0 0 0 0 rgba(46, 232, 122, .7); } 70%, 100% { box-shadow: 0 0 0 8px rgba(46, 232, 122, 0); } }
+@media (prefers-reduced-motion: reduce) { .pin__ping, .status i { animation: none; } }
 .events { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
 .events__title { font: 11px var(--f-mono); letter-spacing: .12em; color: var(--text-dark-muted); }
 .events li:not(.events__title) { padding: 10px 12px; background: #2A3640; display: flex; flex-direction: column; }
@@ -404,7 +411,7 @@ ul, ol { padding: 0; list-style: none; }
 
   <div class="console" aria-label="Приклад інтерфейсу диспетчерської">
     <div class="console__bar">
-      <span>NAVIXY / ДИСПЕТЧЕРСЬКА</span>
+      <span>TIPSTER / ONLINE / ДИСПЕТЧЕРСЬКА</span>
       <span class="status"><i></i>ДЕМО-ЕКРАН</span>
     </div>
     <div class="console__body">
@@ -414,11 +421,11 @@ ul, ol { padding: 0; list-style: none; }
           <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80 M120 -20 L180 350 M260 -20 L330 350 M-20 290 L200 350" stroke="#33414B" stroke-width="12" fill="none"/>
           <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80" stroke="#3E4D57" stroke-width="2" fill="none"/>
           <circle cx="300" cy="120" r="54" fill="none" stroke="#F4F1EA" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="5 5"/>
-          <path class="route" d="M60 250 C 140 180, 200 150, 300 120" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
-          <g class="pin"><circle cx="60" cy="250" r="14"/><circle cx="60" cy="250" r="6"/></g>
-          <g class="pin"><circle cx="190" cy="165" r="14"/><circle cx="190" cy="165" r="6"/></g>
-          <g class="pin"><circle cx="300" cy="120" r="14"/><circle cx="300" cy="120" r="6"/></g>
-          <text x="16" y="314" fill="#A9B0AE" font-size="11" font-family="IBM Plex Mono, monospace">геозона «Склад» / маршрут у роботі</text>
+          <path class="route" d="M60 250 C 140 180, 200 150, 300 120" fill="none"/>
+          <g class="pin pin--0"><circle class="pin__ping" cx="60" cy="250" r="6"/><circle class="pin__halo" cx="60" cy="250" r="13"/><circle class="pin__dot" cx="60" cy="250" r="6"/></g>
+          <g class="pin pin--1"><circle class="pin__ping" cx="190" cy="165" r="6"/><circle class="pin__halo" cx="190" cy="165" r="13"/><circle class="pin__dot" cx="190" cy="165" r="6"/></g>
+          <g class="pin pin--2"><circle class="pin__ping" cx="300" cy="120" r="6"/><circle class="pin__halo" cx="300" cy="120" r="13"/><circle class="pin__dot" cx="300" cy="120" r="6"/></g>
+          <text x="44" y="304" fill="#A9B0AE" font-size="11" font-family="IBM Plex Mono, monospace">геозона «Склад» / маршрут у роботі</text>
         </svg>
       </div>
       <ul class="events" aria-label="Останні події">
