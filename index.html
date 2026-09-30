@@ -9,8 +9,8 @@
 <meta property="og:description" content="Телематика для автопарків, техніки й мобільних команд: Navixy, Teltonika GPS, Garmin. Впровадження та підтримка в Україні.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
-<meta name="theme-color" content="#1B222B">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23DFF25B%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2226%22%20fill%3D%22%231B222B%22%3ETA%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%22512%22%20height%3D%22512%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230066B8%22/%3E%3Cg%20transform%3D%22translate%280%203%29%22%3E%3Cpath%20d%3D%22M23.64%2041.96%20A13.00%2013.00%200%201%201%2040.36%2041.96%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%225.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M17.22%2049.62%20A23.00%2023.00%200%201%201%2046.78%2049.62%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%225.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Ccircle%20cx%3D%2232.00%22%20cy%3D%2232.00%22%20r%3D%227.00%22%20fill%3D%22%23FFD500%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -20,20 +20,25 @@
    Кольори й шрифти змінюються тут, у :root
    ========================================================== */
 :root {
-  --ink: #1B222B;        /* основний графіт */
-  --ink-deep: #141A21;   /* футер */
-  --slate: #25313B;      /* темні панелі */
-  --panel: #1F2831;
-  --line-dark: #2E3A44;
-  --line-dark-2: #3A4750;
-  --ivory: #F4F1EA;      /* світлий фон */
-  --paper: #FBFAF6;
-  --line-light: #DCD7CB;
-  --text-dark-muted: #A9B0AE;  /* сірий на темному */
-  --text-dark-soft: #C2C7C3;
-  --text-light-muted: #4E5752; /* сірий на світлому */
-  --teal: #2F6B5E;
-  --accent: #DFF25B;     /* лаймовий акцент */
+  --ink: #172230;        /* темний синьо-графітовий фон */
+  --ink-deep: #111A26;   /* футер */
+  --slate: #1F2E40;      /* темні панелі */
+  --panel: #1B2837;
+  --line-dark: #2A3A4D;
+  --line-dark-2: #36485D;
+  --ivory: #F2F5F9;      /* світлий фон */
+  --paper: #FFFFFF;
+  --line-light: #DCE3EC;
+  --text-dark-muted: #A9B4C2;  /* сірий на темному */
+  --text-dark-soft: #C9D2DD;
+  --text-light-muted: #4B5563; /* сірий на світлому */
+  --blue: #0D8AE3;       /* синій Navixy — хвилі, іконки, великі елементи */
+  --blue-strong: #0066B8; /* синій прапора — кнопки й посилання на світлому (білий текст) */
+  --blue-light: #3BA3F0;  /* синій на темному фоні */
+  --accent: #3BA3F0;     /* акцент на темному фоні — світлий синій Navixy */
+  --btn: #0A72C0;        /* кнопки з білим текстом (синій Navixy, затемнений для читабельності) */
+  --flag-blue: #0066B8;
+  --flag-yellow: #FFD500;
 
   --f-display: 'Onest', system-ui, sans-serif;
   --f-body: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif;
@@ -59,7 +64,7 @@ img, svg { max-width: 100%; }
 a { color: inherit; }
 h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; box-shadow: 0 0 0 5px var(--blue-strong); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 
 .skip { position: absolute; left: -9999px; top: 0; background: var(--accent); color: var(--ink); padding: 12px 16px; z-index: 100; }
@@ -75,8 +80,8 @@ ul, ol { padding: 0; list-style: none; }
 .slate { background: var(--slate); }
 
 /* ---------- type ---------- */
-.eyebrow { font-family: var(--f-mono); font-size: 13px; letter-spacing: .16em; color: var(--accent); }
-.eyebrow--teal { color: var(--teal); }
+.eyebrow { font-family: var(--f-mono); font-size: 13px; letter-spacing: .16em; color: var(--blue-light); }
+.eyebrow--teal { color: var(--blue-strong); }
 .mono { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; }
 .muted { color: var(--text-light-muted); }
 .muted-dark { color: var(--text-dark-muted); }
@@ -112,24 +117,28 @@ ul, ol { padding: 0; list-style: none; }
 .btn--block { width: 100%; min-height: 56px; font-size: 16px; }
 .btn--accent { background: var(--accent); color: var(--ink); }
 .btn--accent:hover { filter: brightness(1.06); }
-.btn--ghost { border-color: #56626B; color: var(--ivory); }
+.btn--ghost { border-color: #4A6079; color: var(--ivory); }
 .btn--ghost:hover { border-color: var(--ivory); }
-.btn--outline { border-color: var(--ink); color: var(--ink); }
-.btn--outline:hover { background: var(--ink); color: var(--ivory); }
+.btn--outline { border-color: var(--blue-strong); color: var(--blue-strong); }
+.btn--outline:hover { background: var(--blue-strong); color: #FFFFFF; }
+.btn--blue { background: var(--blue-strong); color: #FFFFFF; }
+.btn--blue:hover { background: #00549A; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
 .ico { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 
 /* ---------- header ---------- */
-.header { position: sticky; top: 0; z-index: 50; background: rgba(27, 34, 43, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-dark); }
+.header { position: sticky; top: 0; z-index: 50; background: rgba(23, 34, 48, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-dark); }
 .header__row { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { display: block; height: 40px; width: auto; }
+.footer .logo img { height: 48px; }
 .logo__mark { width: 40px; height: 40px; background: var(--accent); color: var(--ink); display: grid; place-items: center; font: 800 15px var(--f-display); flex-shrink: 0; }
 .logo__text { display: flex; flex-direction: column; line-height: 1.2; }
 .logo__text b { font: 700 20px var(--f-display); color: var(--ivory); }
 .logo__text small { font: 11px var(--f-mono); letter-spacing: .14em; color: var(--text-dark-muted); }
 
+.nav { display: flex; align-items: center; gap: 24px; font-size: 15px; color: #D9E1EA; }
 .nav a, .nav__lang, .btn { white-space: nowrap; }
-.nav { display: flex; align-items: center; gap: 24px; font-size: 15px; color: #D9DCD6; }
 .nav > a:not(.btn) { text-decoration: none; }
 .nav > a:not(.btn):hover { color: var(--accent); }
 .nav__lang { font: 13px var(--f-mono); color: var(--text-dark-muted); }
@@ -137,10 +146,10 @@ ul, ol { padding: 0; list-style: none; }
 .nav__lang a { text-decoration: none; }
 
 .burger { display: none; width: 48px; height: 48px; background: none; border: 1px solid var(--line-dark-2); cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
-/* смуга кольорів прапора під шапкою */
-.header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, #0066B8 0 50%, #FFD500 50% 100%); }
-
 .burger span { display: block; width: 20px; height: 2px; background: var(--ivory); }
+
+/* тонка смуга кольорів прапора під шапкою */
+.header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, var(--flag-blue) 0 50%, var(--flag-yellow) 50% 100%); }
 
 /* ---------- hero ---------- */
 .hero { padding-top: clamp(56px, 7vw, 96px); padding-bottom: 72px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center; }
@@ -153,14 +162,14 @@ ul, ol { padding: 0; list-style: none; }
 .status { display: flex; align-items: center; gap: 8px; }
 .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .console__body { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 14px; }
-.console__map { height: 330px; background: #243039; overflow: hidden; }
+.console__map { height: 330px; background: #1F3044; overflow: hidden; }
 .console__map svg { width: 100%; height: 100%; display: block; }
-.route { stroke: var(--accent); }
+.route { stroke: var(--blue-light); }
 .pin circle:first-child { fill: var(--accent); fill-opacity: .18; }
 .pin circle:last-child { fill: var(--accent); }
 .events { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
 .events__title { font: 11px var(--f-mono); letter-spacing: .12em; color: var(--text-dark-muted); }
-.events li:not(.events__title) { padding: 10px 12px; background: #2A3640; display: flex; flex-direction: column; }
+.events li:not(.events__title) { padding: 10px 12px; background: #243750; display: flex; flex-direction: column; }
 .events b { font-weight: 600; }
 .events span { color: var(--text-dark-muted); }
 .kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line-dark-2); }
@@ -168,10 +177,11 @@ ul, ol { padding: 0; list-style: none; }
 .kpis > div + div { border-left: 1px solid var(--line-dark-2); }
 .kpis dt { font: 24px var(--f-mono); }
 .kpis dd { font-size: 13px; color: var(--text-dark-muted); }
-.console__note { font-size: 12px; color: #8B938F; }
+.console__note { font-size: 12px; color: #8A97A8; }
 
 /* ---------- band ---------- */
-.band { background: var(--accent); color: var(--ink); }
+.band { background: var(--blue-strong); color: #FFFFFF; }
+.band .mono { color: var(--accent); }
 .band__row { padding-top: 36px; padding-bottom: 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .band__text { font: 700 clamp(19px, 2vw, 24px) var(--f-display); }
 
@@ -185,13 +195,15 @@ ul, ol { padding: 0; list-style: none; }
 .door__text { font-size: 17px; flex-grow: 1; }
 .door__arrow { align-self: flex-end; width: 52px; height: 52px; border: 1px solid currentColor; display: grid; place-items: center; }
 .door__arrow .ico { width: 16px; height: 16px; }
-.door--accent { background: var(--accent); color: var(--ink); }
+.door--accent { background: var(--blue-strong); color: #FFFFFF; }
+.door--accent .door__num { color: #CFE3F7; }
+.door--accent .door__text { color: #E6F0FA; }
 .door--paper { background: var(--paper); border: 1px solid var(--line-light); color: var(--ink); }
 .door--paper .door__num, .door--paper .door__text { color: var(--text-light-muted); }
 .door--dark { background: var(--slate); color: var(--ivory); }
 .door--dark .door__num { color: var(--text-dark-muted); }
 .door--dark .door__text { color: var(--text-dark-soft); }
-.door--dashed { border: 1px dashed #8B938F; color: var(--ink); justify-content: flex-end; }
+.door--dashed { border: 1px dashed #8A97A8; color: var(--ink); justify-content: flex-end; }
 .door--dashed .door__text { flex-grow: 0; color: var(--text-light-muted); }
 
 /* ---------- chain ---------- */
@@ -200,7 +212,7 @@ ul, ol { padding: 0; list-style: none; }
 .split__side .h2 { margin-top: 0; }
 .chain { border-top: 1px solid var(--line-dark); align-self: center; }
 .chain li { display: grid; grid-template-columns: 56px minmax(0, 1fr) 180px; gap: 16px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line-dark); }
-.chain__n { font: 14px var(--f-mono); color: var(--accent); }
+.chain__n { font: 14px var(--f-mono); color: var(--blue-light); }
 .chain b { display: block; font-size: 20px; font-weight: 600; }
 .chain small { color: var(--text-dark-muted); font-size: 15px; }
 .chain__tag { font: 13px var(--f-mono); color: var(--text-dark-muted); text-align: right; }
@@ -220,7 +232,7 @@ ul, ol { padding: 0; list-style: none; }
 .config__head .h2 { margin-top: 16px; }
 .config__head > p { max-width: 340px; font-size: 15px; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-.chip { min-height: 48px; padding: 0 22px; font: 600 15px var(--f-body); cursor: pointer; background: transparent; color: var(--ivory); border: 1px solid #56626B; }
+.chip { min-height: 48px; padding: 0 22px; font: 600 15px var(--f-body); cursor: pointer; background: transparent; color: var(--ivory); border: 1px solid #4A6079; }
 .chip:hover { border-color: var(--ivory); }
 .chip[aria-selected="true"] { background: var(--accent); color: var(--ink); border-color: var(--accent); }
 .config__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line-dark-2); }
@@ -230,7 +242,7 @@ ul, ol { padding: 0; list-style: none; }
 .config__cta { justify-content: flex-end; align-items: flex-start; }
 .kit { display: flex; flex-direction: column; gap: 12px; font-size: 15px; }
 .kit li { display: flex; gap: 12px; }
-.kit li::before { content: "+"; font-family: var(--f-mono); color: var(--accent); }
+.kit li::before { content: "+"; font-family: var(--f-mono); color: var(--blue-light); }
 
 /* ---------- industries ---------- */
 .industries { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--line-light); counter-reset: ind; }
@@ -239,7 +251,7 @@ ul, ol { padding: 0; list-style: none; }
 .industries a:not(.industries__cta)::before { counter-increment: ind; content: counter(ind, decimal-leading-zero); font: 12px var(--f-mono); color: var(--text-light-muted); }
 .industries h3 { font: 700 22px var(--f-display); }
 .industries p { color: var(--text-light-muted); font-size: 15px; }
-.industries__cta { background: var(--accent); justify-content: space-between; }
+.industries__cta { background: var(--accent); color: var(--ink); justify-content: space-between; }
 .industries__cta:hover { background: var(--accent) !important; filter: brightness(1.04); }
 
 /* ---------- process ---------- */
@@ -266,8 +278,8 @@ ul, ol { padding: 0; list-style: none; }
 .form { background: var(--ink); border: 1px solid var(--line-dark-2); padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 18px; }
 .form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .form label { display: flex; flex-direction: column; gap: 8px; font: 12px var(--f-mono); letter-spacing: .1em; color: var(--text-dark-muted); }
-.form input, .form select { height: 50px; padding: 0 12px; background: #243039; color: var(--ivory); border: 1px solid var(--line-dark-2); font: 15px var(--f-body); letter-spacing: 0; width: 100%; }
-.form input::placeholder { color: #7E8784; }
+.form input, .form select { height: 50px; padding: 0 12px; background: #1F3044; color: var(--ivory); border: 1px solid var(--line-dark-2); font: 15px var(--f-body); letter-spacing: 0; width: 100%; }
+.form input::placeholder { color: #7F8DA0; }
 .form input:focus, .form select:focus { border-color: var(--accent); outline: none; }
 .form input[aria-invalid="true"] { border-color: #FF8A7A; }
 .form__msg { min-height: 1em; font-size: 14px; color: var(--accent); }
@@ -280,10 +292,10 @@ ul, ol { padding: 0; list-style: none; }
 .footer__grid { padding-top: 80px; padding-bottom: 48px; display: grid; grid-template-columns: 4fr 3fr 3fr 3fr; gap: 40px; font-size: 15px; }
 .footer__grid p { max-width: 360px; }
 .footer__col { display: flex; flex-direction: column; gap: 12px; }
-.footer__col .eyebrow { font-size: 12px; letter-spacing: .14em; }
+.footer__col .eyebrow { font-size: 12px; letter-spacing: .14em; color: var(--accent); }
 .footer__col a { text-decoration: none; }
 .footer__col a:hover { color: var(--accent); }
-.footer__legal { padding-top: 24px; padding-bottom: 36px; border-top: 1px solid var(--slate); display: flex; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; font: 12px var(--f-mono); color: #8B938F; }
+.footer__legal { padding-top: 24px; padding-bottom: 36px; border-top: 1px solid var(--slate); display: flex; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; font: 12px var(--f-mono); color: #8A97A8; }
 
 /* ==========================================================
    Адаптив
@@ -333,6 +345,66 @@ ul, ol { padding: 0; list-style: none; }
   .btn-row .btn { width: 100%; }
 }
 
+
+/* ==========================================================
+   Тема Navixy: світла шапка й перший екран, синій акцент
+   ========================================================== */
+body { background: #F5F8FC; color: var(--ink); }
+.dark, .slate { color: var(--ivory); }
+
+/* логотип + слоган */
+.logo { flex-direction: column; align-items: flex-start; gap: 4px; }
+.logo img { height: 34px; }
+.footer .logo img { height: 44px; }
+.logo__slogan { font: 500 10.5px var(--f-mono); letter-spacing: .22em; color: #5B6573; padding-left: 2px; }
+.footer .logo__slogan { color: var(--text-dark-muted); }
+
+/* шапка */
+.header { background: rgba(255, 255, 255, .96); border-bottom: 1px solid var(--line-light); }
+.nav { color: var(--ink); }
+.nav > a:not(.btn):hover { color: var(--btn); }
+.nav__lang { color: #5B6573; }
+.nav__lang b { color: var(--ink); }
+.burger { border-color: var(--line-light); }
+.burger span { background: var(--ink); }
+
+/* кнопки */
+.btn--accent { background: var(--btn); color: #FFFFFF; }
+.btn--accent:hover { background: #085E9F; filter: none; }
+.hero .btn--ghost { border-color: #B8C4D2; color: var(--ink); }
+.hero .btn--ghost:hover { border-color: var(--ink); }
+.chip[aria-selected="true"] { background: var(--btn); color: #FFFFFF; border-color: var(--btn); }
+
+/* перший екран */
+.hero__title { color: var(--ink); }
+.hero .accent-text { color: var(--btn); }
+.hero .eyebrow { color: var(--btn); }
+.hero__lead { color: #4B5563; }
+.console { box-shadow: 0 30px 60px -30px rgba(23, 34, 48, .45); }
+
+/* акценти */
+.band { background: var(--blue); }
+.band .mono { color: #FFFFFF; }
+.door--accent { background: var(--btn); }
+.industries__cta { background: var(--btn); color: #FFFFFF; }
+.industries__cta:hover { background: #085E9F !important; filter: none; }
+.form__msg { color: var(--accent); }
+.footer__col .eyebrow { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; box-shadow: none; }
+
+@media (max-width: 1240px) {
+  .nav { background: #FFFFFF; border-bottom: 1px solid var(--line-light); }
+  .nav > a:not(.btn) { border-bottom-color: var(--line-light); }
+}
+.console, .config, .footer { color: var(--ivory); }
+.footer { color: var(--text-dark-soft); }
+
+/* кнопки магазинів застосунків у картці 04 */
+.door__stores { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn--store { min-height: 44px; padding: 0 18px; border: 1px solid #4A6079; color: var(--ivory); }
+.btn--store:hover { border-color: var(--ivory); }
+div.door:hover { transform: none; }
+
 </style>
 </head>
 <body>
@@ -342,10 +414,7 @@ ul, ol { padding: 0; list-style: none; }
 <!-- ============ HEADER ============ -->
 <header class="header">
   <div class="wrap header__row">
-    <a class="logo" href="#top" aria-label="TrackAuto — на головну">
-      <span class="logo__mark">TA</span>
-      <span class="logo__text"><b>trackauto</b><small>CONNECTED OPERATIONS</small></span>
-    </a>
+    <a class="logo" href="#top" aria-label="TrackAuto — на головну"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22-4%20-4%20495%20108%22%20width%3D%22495%22%20height%3D%22108%22%3E%0A%3Cpath%20d%3D%22M37.83%2063.93%20A20.80%2020.80%200%201%201%2064.57%2063.93%22%20fill%3D%22none%22%20stroke%3D%22%230D8AE3%22%20stroke-width%3D%228.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M27.55%2076.19%20A36.80%2036.80%200%201%201%2074.85%2076.19%22%20fill%3D%22none%22%20stroke%3D%22%230D8AE3%22%20stroke-width%3D%228.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M51.20%2048.00%20V96.00%20H482.68%22%20fill%3D%22none%22%20stroke%3D%22%230066B8%22%20stroke-width%3D%224.16%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Ccircle%20cx%3D%2251.20%22%20cy%3D%2248.00%22%20r%3D%2211.20%22%20fill%3D%22%230066B8%22/%3E%0A%3Cpath%20d%3D%22M127.58124951171875%2076.0V31.134232421874998H110.67081713867188V20.807201904296875H155.7235009765625V31.134232421874998H138.7662705078125V76.0ZM159.1400380859375%2076.0V34.894H168.95229907226562L169.63868383789062%2039.7924609375Q171.19868383789063%2037.46805712890625%20173.14868859863282%2036.266845703125Q175.098693359375%2035.06563427734375%20177.23590954589844%2034.62882189941406Q179.37312573242187%2034.19200952148437%20181.49476000976563%2034.19200952148437Q182.50874096679686%2034.19200952148437%20183.36672668457032%2034.215408569335935Q184.22471240234376%2034.2388076171875%20184.63031811523436%2034.28560571289062V44.784232421875004H182.071923828125Q178.40587622070314%2044.784232421875004%20175.68366479492187%2046.055664794921874Q172.96145336914063%2047.327097167968745%20171.51845812988282%2049.955731445312495Q170.075462890625%2052.58436572265625%20170.075462890625%2056.74956762695312V76.0ZM201.27564379882813%2076.56159619140625Q198.420845703125%2076.56159619140625%20195.83124475097657%2075.79719714355468Q193.2416437988281%2075.03279809570313%20191.22144189453124%2073.48839904785157Q189.20123999023437%2071.944%20188.0156390380859%2069.61960095214843Q186.83003808593747%2067.29520190429687%20186.83003808593747%2064.15960571289062Q186.83003808593747%2059.94763427734375%20188.5382209472656%2057.38923999023437Q190.24640380859373%2054.830845703125%20193.15577429199217%2053.520441894531245Q196.06514477539062%2052.2100380859375%20199.81690954589843%2051.74983142089844Q203.56867431640623%2051.28962475585938%20207.62463623046875%2051.28962475585938H213.58408569335936Q213.58408569335936%2048.99637524414062%20212.7728790283203%2047.26474096679687Q211.96167236328125%2045.53310668945312%20210.31585046386718%2044.53468859863281Q208.6700285644531%2043.5362705078125%20206.11158666992185%2043.5362705078125Q204.44236572265623%2043.5362705078125%20202.96814953613278%2043.957472412109375Q201.49393334960936%2044.37867431640625%20200.49552001953123%2045.18208288574219Q199.49710668945312%2045.985491455078126%20199.15389526367187%2047.233510498046876H188.07805712890624Q188.57725903320312%2043.81713525390625%20190.2698552246094%2041.360154296874995Q191.96245141601563%2038.90317333984375%20194.5208409423828%2037.335384765624994Q197.07923046874998%2035.76759619140625%20200.1524133300781%2035.00320190429687Q203.22559619140623%2034.2388076171875%20206.48597143554687%2034.2388076171875Q212.50756762695312%2034.2388076171875%20216.37635620117186%2036.524211425781246Q220.2451447753906%2038.809615234375%20222.14053430175778%2043.18541333007813Q224.035923828125%2047.56121142578125%20224.035923828125%2053.863596191406245V76.0H214.19249902343748L214.0364895019531%2070.68040380859375Q212.13329711914062%2073.44158666992188%20209.64509997558594%2074.68958666992188Q207.15690283203125%2075.93758666992187%20204.90269140625%2076.24959143066405Q202.64847998046875%2076.56159619140625%20201.27564379882813%2076.56159619140625ZM203.77156762695313%2067.90371044921875Q206.50161523437498%2067.90371044921875%20208.74023999023436%2066.80390283203124Q210.97886474609373%2065.70409521484375%20212.32827331542967%2063.81647045898437Q213.6776818847656%2061.928845703125%20213.6776818847656%2059.60439428710937V58.605952392578125H204.50478857421874Q203.3815771484375%2058.605952392578125%20202.15695715332032%2058.78535144042969Q200.93233715820313%2058.964750488281254%20199.9261162109375%2059.432755249023444Q198.91989526367186%2059.90076000976563%20198.2958809814453%2060.78997619628906Q197.67186669921873%2061.6791923828125%20197.67186669921873%2063.17682666015625Q197.67186669921873%2064.76805712890625%20198.50648193359373%2065.80547521972656Q199.34109716796874%2066.84289331054687%20200.74512097167968%2067.3733018798828Q202.14914477539062%2067.90371044921875%20203.77156762695313%2067.90371044921875ZM249.2767980957031%2076.56159619140625Q242.97439428710936%2076.56159619140625%20238.54400476074215%2073.98759143066405Q234.11361523437498%2071.41358666992187%20231.76582666015622%2066.67898571777343Q229.4180380859375%2061.944384765625%20229.4180380859375%2055.564Q229.4180380859375%2049.105624755859374%20231.84382666015625%2044.30862475585937Q234.26961523437498%2039.51162475585937%20238.80920666503903%2036.851817138671876Q243.3487980957031%2034.19200952148437%20249.6668076171875%2034.19200952148437Q254.76798095703123%2034.19200952148437%20258.6835581054687%2035.97039428710937Q262.59913525390624%2037.74877905273438%20264.9859285888672%2041.11835144042969Q267.3727219238281%2044.487923828125005%20267.8095390625%2049.433087646484374H257.1392971191406Q256.39047998046874%2046.703059082031245%20254.41705712890624%2045.408251464843744Q252.44363427734373%2044.11344384765625%20249.71360571289063%2044.11344384765625Q246.1567600097656%2044.11344384765625%20244.0975295410156%2045.837260986328126Q242.0382990722656%2047.561078125%20241.1490828857422%2050.18971240234375Q240.25986669921875%2052.8183466796875%20240.25986669921875%2055.50159619140625Q240.25986669921875%2058.38764379882812%20241.21148193359375%2060.946080932617186Q242.16309716796874%2063.50451806640625%20244.22232763671875%2065.09573901367187Q246.28155810546875%2066.6869599609375%20249.60440380859373%2066.6869599609375Q252.4124228515625%2066.6869599609375%20254.5184561767578%2065.39995520019531Q256.6244895019531%2064.11295043945313%20257.23290283203124%2061.4141142578125H268.2151352539062Q267.80952001953125%2066.46847998046874%20265.14192382812496%2069.83025427246093Q262.4743276367187%2073.19202856445312%20258.35594763183593%2074.8768123779297Q254.2375676269531%2076.56159619140625%20249.2767980957031%2076.56159619140625ZM273.2540380859375%2076.0V20.807201904296875H284.189462890625V50.68127807617188H289.5403371582031L299.61802856445314%2034.894H311.87943432617186L298.7598095703125%2054.472L312.9558381347656%2076.0H300.28883618164065L289.9927504882813%2060.38431811523438H284.189462890625V76.0ZM311.0840285644531%2076.0%20332.58078857421873%2020.807201904296875H345.0918762207031L366.4170400390625%2076.0H354.35843237304687L350.9731923828125%2066.5775009765625H326.5278762207031L323.0958381347656%2076.0ZM330.1002229003906%2056.4844609375H347.40084570312496L338.82073144531245%2032.63176196289063ZM387.8515771484375%2076.56159619140625Q378.788%2076.56159619140625%20373.91301904296876%2071.92060095214845Q369.0380380859375%2067.27960571289063%20369.0380380859375%2057.872807617187505V34.894H379.973462890625V57.09282666015625Q379.973462890625%2059.932076171874996%20380.76907812499996%2062.09270568847656Q381.564693359375%2064.25333520507813%20383.3119190673828%2065.47014758300782Q385.0591447753906%2066.6869599609375%20387.8515771484375%2066.6869599609375Q390.89360571289063%2066.6869599609375%20392.5394371337891%2065.37655139160157Q394.18526855468747%2064.06614282226562%20394.80148950195314%2061.858715209960934Q395.41771044921876%2059.65128759765625%20395.41771044921876%2057.09282666015625V34.894H406.35313525390626V57.872807617187505Q406.35313525390626%2067.65399047851562%20401.44695239257817%2072.10779333496095Q396.54076953125%2076.56159619140625%20387.8515771484375%2076.56159619140625ZM431.21958666992185%2076.0Q426.07160571289063%2076.0%20422.78002380371095%2074.73639428710938Q419.48844189453126%2073.47278857421875%20417.89725427246094%2070.48538952636719Q416.3060666503906%2067.49799047851562%20416.3060666503906%2062.27201904296875V44.62824194335937H410.2064418945312V34.894H416.3060666503906V23.864750488281253H427.2414914550781V34.894H436.18037524414063V44.62824194335937H427.2414914550781V60.7276533203125Q427.2414914550781%2063.301719970703125%20428.1541162109375%2064.76033996582031Q429.0667409667969%2066.2189599609375%20432.3895961914062%2066.2189599609375H435.80598095703124V76.0ZM459.45558666992184%2076.56159619140625Q453.2155771484375%2076.56159619140625%20448.54338952636715%2074.03438952636719Q443.87120190429687%2071.50718286132812%20441.2816199951172%2066.77258190917968Q438.6920380859375%2062.03798095703125%20438.6920380859375%2055.53279809570313Q438.6920380859375%2048.90281713867188%20441.32061999511717%2044.13701904296875Q443.94920190429684%2039.37122094726563%20448.5979904785156%2036.781615234374996Q453.2467790527344%2034.19200952148437%20459.37759619140627%2034.19200952148437Q465.5708076171875%2034.19200952148437%20470.18059619140627%2036.82841333007812Q474.790384765625%2039.464817138671876%20477.3565676269531%2044.254014282226564Q479.9227504882812%2049.04321142578125%20479.9227504882812%2055.6731923828125Q479.9227504882812%2062.1315771484375%20477.41116381835934%2066.84277905273439Q474.8995771484375%2071.55398095703126%20470.3131876220703%2074.05778857421876Q465.7267980957031%2076.56159619140625%20459.45558666992184%2076.56159619140625ZM459.3151923828125%2066.54656567382813Q462.90323046875%2066.54656567382813%20465.0716580810547%2064.98654663085938Q467.2400856933594%2063.426527587890625%20468.20730187988283%2060.907090454101564Q469.1745180664062%2058.387653320312495%20469.1745180664062%2055.57959619140625Q469.1745180664062%2052.7715390625%20468.20730187988283%2050.16630383300781Q467.2400856933594%2047.56106860351562%20465.09505712890626%2045.907453369140626Q462.95002856445313%2044.25383813476563%20459.3151923828125%2044.25383813476563Q455.75835620117186%2044.25383813476563%20453.5665295410156%2045.907453369140626Q451.3747028808594%2047.56106860351562%20450.40748669433594%2050.14290478515625Q449.4402705078125%2052.72474096679687%20449.4402705078125%2055.57959619140625Q449.4402705078125%2058.43445141601563%20450.43088574218746%2060.95388854980469Q451.42150097656247%2063.47332568359375%20453.58992858886717%2065.00994567871093Q455.75835620117186%2066.54656567382813%20459.3151923828125%2066.54656567382813Z%22%20fill%3D%22%23172230%22/%3E%0A%3C/svg%3E" alt="TrackAuto" width="170" height="34"><span class="logo__slogan">WE TRACK SUCCESS</span></a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Відкрити меню">
       <span></span><span></span><span></span>
@@ -358,8 +427,8 @@ ul, ol { padding: 0; list-style: none; }
       <a href="https://tipster.ua/">TIPSTER</a>
       <a href="#apps">Застосунки</a>
       <a href="https://hub.tipster.ua/">Партнерам</a>
-      <span class="nav__lang"><b>UA</b> / <a href="#" aria-label="English version (незабаром)">EN</a></span>
-      <a class="btn btn--accent" href="https://www.tagps.com.ua/">Увійти в TAGPS <svg class="ico" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6"/></svg></a>
+      <!-- <span class="nav__lang"><b>UA</b> / <a href="/en/">EN</a></span>  увімкнути, коли з’явиться англійська версія -->
+      <a class="btn btn--accent" href="https://www.tagps.com.ua/">Вхід для клієнтів <svg class="ico" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6"/></svg></a>
     </nav>
   </div>
 </header>
@@ -374,7 +443,7 @@ ul, ol { padding: 0; list-style: none; }
     <p class="hero__lead">Інтегратор телематики для бізнесу: платформа Navixy, обладнання Teltonika GPS і навігація Garmin — з впровадженням і підтримкою в Україні.</p>
     <div class="btn-row">
       <a class="btn btn--accent btn--lg" href="#demo">Отримати демо <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-      <a class="btn btn--ghost btn--lg" href="#entry">Знайти готове рішення</a>
+      <a class="btn btn--ghost btn--lg" href="#entry">Обрати свій шлях</a>
     </div>
   </div>
 
@@ -386,9 +455,9 @@ ul, ol { padding: 0; list-style: none; }
     <div class="console__body">
       <div class="console__map">
         <svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Карта з маршрутом, геозоною та трьома об’єктами">
-          <rect width="400" height="330" fill="#243039"/>
-          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80 M120 -20 L180 350 M260 -20 L330 350 M-20 290 L200 350" stroke="#33414B" stroke-width="12" fill="none"/>
-          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80" stroke="#3E4D57" stroke-width="2" fill="none"/>
+          <rect width="400" height="330" fill="#1F3044"/>
+          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80 M120 -20 L180 350 M260 -20 L330 350 M-20 290 L200 350" stroke="#2A3E55" stroke-width="12" fill="none"/>
+          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80" stroke="#34506E" stroke-width="2" fill="none"/>
           <circle cx="300" cy="120" r="54" fill="none" stroke="#F4F1EA" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="5 5"/>
           <path class="route" d="M60 250 C 140 180, 200 150, 300 120" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
           <g class="pin"><circle cx="60" cy="250" r="14"/><circle cx="60" cy="250" r="6"/></g>
@@ -410,7 +479,7 @@ ul, ol { padding: 0; list-style: none; }
       <div><dt>2010</dt><dd>працюємо з цього року</dd></div>
       <div><dt>24/7</dt><dd>підтримка клієнтів</dd></div>
     </dl>
-    <p class="console__note">Ілюстрація інтерфейсу. Замініть на реальний скриншот Navixy.</p>
+    <!-- TODO: замініть SVG-карту вище на реальний скриншот Navixy -->
   </div>
 </section>
 
@@ -452,12 +521,15 @@ ul, ol { padding: 0; list-style: none; }
         <span class="door__text">Клієнтський портал TAGPS: увійдіть і перевірте, що відбувається з вашими об’єктами.</span>
         <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
       </a>
-      <a id="apps" class="door door--dark" href="#demo">
+      <div id="apps" class="door door--dark">
         <span class="door__num">04 / ЗАСТОСУНКИ</span>
         <span class="door__title">Мені потрібен застосунок</span>
-        <span class="door__text">Для власника, польового працівника або мобільного моніторингу. <!-- TODO: посилання на App Store / Google Play --></span>
-        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
-      </a>
+        <span class="door__text">X-GPS Monitor — моніторинг з телефона для власника, диспетчера й польового працівника.</span>
+        <span class="door__stores">
+          <a class="btn btn--store" href="https://play.google.com/store/apps/details?id=com.navixy.xgps.client.app">Google Play ↗</a>
+          <a class="btn btn--store" href="https://apps.apple.com/us/app/x-gps-monitor/id883610994">App Store ↗</a>
+        </span>
+      </div>
       <a class="door door--paper" href="https://hub.tipster.ua/">
         <span class="door__num">05 / HUB TIPSTER</span>
         <span class="door__title">Я розвиваю партнерський бізнес</span>
@@ -501,7 +573,7 @@ ul, ol { padding: 0; list-style: none; }
       </div>
       <div class="stack">
         <p class="lead">Від першого запиту до щоденного використання — без розриву між продавцем, інтегратором і користувачем.</p>
-        <a class="btn btn--outline" href="#demo">Подивитися product tour</a>
+        <a class="btn btn--outline" href="#demo">Подивитися, як це працює</a>
       </div>
     </div>
     <div class="roles">
@@ -530,7 +602,7 @@ ul, ol { padding: 0; list-style: none; }
       <div class="config__grid" aria-live="polite">
         <div><p class="mono muted-dark">ТРАНСПОРТ</p><p class="config__transport" data-field="transport"></p><p class="muted-dark" data-field="result"></p></div>
         <div><p class="mono muted-dark">КОМПЛЕКТ</p><ul class="kit" data-field="kit"></ul></div>
-        <div class="config__cta"><p class="mono muted-dark">НАСТУПНИЙ КРОК</p><a class="btn btn--accent" data-field="cta" href="#demo">Розрахувати рішення</a></div>
+        <div class="config__cta"><p class="mono muted-dark">НАСТУПНИЙ КРОК</p><a class="btn btn--accent" data-field="cta" href="#demo">Отримати розрахунок</a></div>
       </div>
     </div>
   </div>
@@ -588,12 +660,14 @@ ul, ol { padding: 0; list-style: none; }
         <div><dt>Garmin</dt><dd>офіційний дилер в Україні</dd></div>
       </dl>
     </div>
-    <!-- TODO: замініть заглушки реальними кейсами -->
+    <!-- Блок кейсів приховано до появи реальних даних. Щоб увімкнути — приберіть коментар.
+    
     <div class="cases">
       <article><p class="mono muted">КЕЙС / ЛОГІСТИКА</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
       <article><p class="mono muted">КЕЙС / АГРО</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
       <article><p class="mono muted">КЕЙС / СЕРВІС</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
-    </div>
+        -->
+</div>
   </div>
 </section>
 
@@ -618,7 +692,7 @@ ul, ol { padding: 0; list-style: none; }
             <option>Логістика</option><option>Агро</option><option>Будівництво</option><option>Сервісні команди</option><option>Комунальні служби</option><option>Прокат</option><option>Мото й аутдор</option><option>Інше</option>
           </select>
         </label>
-        <label>КІЛЬКІСТЬ ТЗ
+        <label>СКІЛЬКИ У ВАС ТРАНСПОРТУ
           <input type="number" name="units" min="1" placeholder="Напр., 25">
         </label>
       </div>
@@ -632,10 +706,10 @@ ul, ol { padding: 0; list-style: none; }
           <input type="text" name="name" autocomplete="name" required>
         </label>
         <label>ТЕЛЕФОН
-          <input type="tel" name="phone" autocomplete="tel" placeholder="+380" required>
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+380 67 123 45 67" required>
         </label>
       </div>
-      <button class="btn btn--accent btn--block" type="submit">Надіслати заявку</button>
+      <button class="btn btn--accent btn--block" type="submit">Запросити демо</button>
       <p class="form__msg" role="status" aria-live="polite"></p>
       <p class="form__alt">Або одразу: <a href="mailto:office@trackauto.ua">office@trackauto.ua</a> · <a href="tel:+380444516617">+38 044 451 66 17</a></p>
     </form>
@@ -648,7 +722,7 @@ ul, ol { padding: 0; list-style: none; }
 <footer class="footer">
   <div class="wrap footer__grid">
     <div class="stack">
-      <a class="logo" href="#top"><span class="logo__mark">TA</span><span class="logo__text"><b>trackauto</b><small>CONNECTED OPERATIONS</small></span></a>
+      <a class="logo" href="#top" aria-label="TrackAuto — на головну"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22-4%20-4%20495%20108%22%20width%3D%22495%22%20height%3D%22108%22%3E%0A%3Cpath%20d%3D%22M37.83%2063.93%20A20.80%2020.80%200%201%201%2064.57%2063.93%22%20fill%3D%22none%22%20stroke%3D%22%233BA3F0%22%20stroke-width%3D%228.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M27.55%2076.19%20A36.80%2036.80%200%201%201%2074.85%2076.19%22%20fill%3D%22none%22%20stroke%3D%22%233BA3F0%22%20stroke-width%3D%228.00%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cpath%20d%3D%22M51.20%2048.00%20V96.00%20H482.68%22%20fill%3D%22none%22%20stroke%3D%22%23FFD500%22%20stroke-width%3D%224.16%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%0A%3Ccircle%20cx%3D%2251.20%22%20cy%3D%2248.00%22%20r%3D%2211.20%22%20fill%3D%22%23FFD500%22/%3E%0A%3Cpath%20d%3D%22M127.58124951171875%2076.0V31.134232421874998H110.67081713867188V20.807201904296875H155.7235009765625V31.134232421874998H138.7662705078125V76.0ZM159.1400380859375%2076.0V34.894H168.95229907226562L169.63868383789062%2039.7924609375Q171.19868383789063%2037.46805712890625%20173.14868859863282%2036.266845703125Q175.098693359375%2035.06563427734375%20177.23590954589844%2034.62882189941406Q179.37312573242187%2034.19200952148437%20181.49476000976563%2034.19200952148437Q182.50874096679686%2034.19200952148437%20183.36672668457032%2034.215408569335935Q184.22471240234376%2034.2388076171875%20184.63031811523436%2034.28560571289062V44.784232421875004H182.071923828125Q178.40587622070314%2044.784232421875004%20175.68366479492187%2046.055664794921874Q172.96145336914063%2047.327097167968745%20171.51845812988282%2049.955731445312495Q170.075462890625%2052.58436572265625%20170.075462890625%2056.74956762695312V76.0ZM201.27564379882813%2076.56159619140625Q198.420845703125%2076.56159619140625%20195.83124475097657%2075.79719714355468Q193.2416437988281%2075.03279809570313%20191.22144189453124%2073.48839904785157Q189.20123999023437%2071.944%20188.0156390380859%2069.61960095214843Q186.83003808593747%2067.29520190429687%20186.83003808593747%2064.15960571289062Q186.83003808593747%2059.94763427734375%20188.5382209472656%2057.38923999023437Q190.24640380859373%2054.830845703125%20193.15577429199217%2053.520441894531245Q196.06514477539062%2052.2100380859375%20199.81690954589843%2051.74983142089844Q203.56867431640623%2051.28962475585938%20207.62463623046875%2051.28962475585938H213.58408569335936Q213.58408569335936%2048.99637524414062%20212.7728790283203%2047.26474096679687Q211.96167236328125%2045.53310668945312%20210.31585046386718%2044.53468859863281Q208.6700285644531%2043.5362705078125%20206.11158666992185%2043.5362705078125Q204.44236572265623%2043.5362705078125%20202.96814953613278%2043.957472412109375Q201.49393334960936%2044.37867431640625%20200.49552001953123%2045.18208288574219Q199.49710668945312%2045.985491455078126%20199.15389526367187%2047.233510498046876H188.07805712890624Q188.57725903320312%2043.81713525390625%20190.2698552246094%2041.360154296874995Q191.96245141601563%2038.90317333984375%20194.5208409423828%2037.335384765624994Q197.07923046874998%2035.76759619140625%20200.1524133300781%2035.00320190429687Q203.22559619140623%2034.2388076171875%20206.48597143554687%2034.2388076171875Q212.50756762695312%2034.2388076171875%20216.37635620117186%2036.524211425781246Q220.2451447753906%2038.809615234375%20222.14053430175778%2043.18541333007813Q224.035923828125%2047.56121142578125%20224.035923828125%2053.863596191406245V76.0H214.19249902343748L214.0364895019531%2070.68040380859375Q212.13329711914062%2073.44158666992188%20209.64509997558594%2074.68958666992188Q207.15690283203125%2075.93758666992187%20204.90269140625%2076.24959143066405Q202.64847998046875%2076.56159619140625%20201.27564379882813%2076.56159619140625ZM203.77156762695313%2067.90371044921875Q206.50161523437498%2067.90371044921875%20208.74023999023436%2066.80390283203124Q210.97886474609373%2065.70409521484375%20212.32827331542967%2063.81647045898437Q213.6776818847656%2061.928845703125%20213.6776818847656%2059.60439428710937V58.605952392578125H204.50478857421874Q203.3815771484375%2058.605952392578125%20202.15695715332032%2058.78535144042969Q200.93233715820313%2058.964750488281254%20199.9261162109375%2059.432755249023444Q198.91989526367186%2059.90076000976563%20198.2958809814453%2060.78997619628906Q197.67186669921873%2061.6791923828125%20197.67186669921873%2063.17682666015625Q197.67186669921873%2064.76805712890625%20198.50648193359373%2065.80547521972656Q199.34109716796874%2066.84289331054687%20200.74512097167968%2067.3733018798828Q202.14914477539062%2067.90371044921875%20203.77156762695313%2067.90371044921875ZM249.2767980957031%2076.56159619140625Q242.97439428710936%2076.56159619140625%20238.54400476074215%2073.98759143066405Q234.11361523437498%2071.41358666992187%20231.76582666015622%2066.67898571777343Q229.4180380859375%2061.944384765625%20229.4180380859375%2055.564Q229.4180380859375%2049.105624755859374%20231.84382666015625%2044.30862475585937Q234.26961523437498%2039.51162475585937%20238.80920666503903%2036.851817138671876Q243.3487980957031%2034.19200952148437%20249.6668076171875%2034.19200952148437Q254.76798095703123%2034.19200952148437%20258.6835581054687%2035.97039428710937Q262.59913525390624%2037.74877905273438%20264.9859285888672%2041.11835144042969Q267.3727219238281%2044.487923828125005%20267.8095390625%2049.433087646484374H257.1392971191406Q256.39047998046874%2046.703059082031245%20254.41705712890624%2045.408251464843744Q252.44363427734373%2044.11344384765625%20249.71360571289063%2044.11344384765625Q246.1567600097656%2044.11344384765625%20244.0975295410156%2045.837260986328126Q242.0382990722656%2047.561078125%20241.1490828857422%2050.18971240234375Q240.25986669921875%2052.8183466796875%20240.25986669921875%2055.50159619140625Q240.25986669921875%2058.38764379882812%20241.21148193359375%2060.946080932617186Q242.16309716796874%2063.50451806640625%20244.22232763671875%2065.09573901367187Q246.28155810546875%2066.6869599609375%20249.60440380859373%2066.6869599609375Q252.4124228515625%2066.6869599609375%20254.5184561767578%2065.39995520019531Q256.6244895019531%2064.11295043945313%20257.23290283203124%2061.4141142578125H268.2151352539062Q267.80952001953125%2066.46847998046874%20265.14192382812496%2069.83025427246093Q262.4743276367187%2073.19202856445312%20258.35594763183593%2074.8768123779297Q254.2375676269531%2076.56159619140625%20249.2767980957031%2076.56159619140625ZM273.2540380859375%2076.0V20.807201904296875H284.189462890625V50.68127807617188H289.5403371582031L299.61802856445314%2034.894H311.87943432617186L298.7598095703125%2054.472L312.9558381347656%2076.0H300.28883618164065L289.9927504882813%2060.38431811523438H284.189462890625V76.0ZM311.0840285644531%2076.0%20332.58078857421873%2020.807201904296875H345.0918762207031L366.4170400390625%2076.0H354.35843237304687L350.9731923828125%2066.5775009765625H326.5278762207031L323.0958381347656%2076.0ZM330.1002229003906%2056.4844609375H347.40084570312496L338.82073144531245%2032.63176196289063ZM387.8515771484375%2076.56159619140625Q378.788%2076.56159619140625%20373.91301904296876%2071.92060095214845Q369.0380380859375%2067.27960571289063%20369.0380380859375%2057.872807617187505V34.894H379.973462890625V57.09282666015625Q379.973462890625%2059.932076171874996%20380.76907812499996%2062.09270568847656Q381.564693359375%2064.25333520507813%20383.3119190673828%2065.47014758300782Q385.0591447753906%2066.6869599609375%20387.8515771484375%2066.6869599609375Q390.89360571289063%2066.6869599609375%20392.5394371337891%2065.37655139160157Q394.18526855468747%2064.06614282226562%20394.80148950195314%2061.858715209960934Q395.41771044921876%2059.65128759765625%20395.41771044921876%2057.09282666015625V34.894H406.35313525390626V57.872807617187505Q406.35313525390626%2067.65399047851562%20401.44695239257817%2072.10779333496095Q396.54076953125%2076.56159619140625%20387.8515771484375%2076.56159619140625ZM431.21958666992185%2076.0Q426.07160571289063%2076.0%20422.78002380371095%2074.73639428710938Q419.48844189453126%2073.47278857421875%20417.89725427246094%2070.48538952636719Q416.3060666503906%2067.49799047851562%20416.3060666503906%2062.27201904296875V44.62824194335937H410.2064418945312V34.894H416.3060666503906V23.864750488281253H427.2414914550781V34.894H436.18037524414063V44.62824194335937H427.2414914550781V60.7276533203125Q427.2414914550781%2063.301719970703125%20428.1541162109375%2064.76033996582031Q429.0667409667969%2066.2189599609375%20432.3895961914062%2066.2189599609375H435.80598095703124V76.0ZM459.45558666992184%2076.56159619140625Q453.2155771484375%2076.56159619140625%20448.54338952636715%2074.03438952636719Q443.87120190429687%2071.50718286132812%20441.2816199951172%2066.77258190917968Q438.6920380859375%2062.03798095703125%20438.6920380859375%2055.53279809570313Q438.6920380859375%2048.90281713867188%20441.32061999511717%2044.13701904296875Q443.94920190429684%2039.37122094726563%20448.5979904785156%2036.781615234374996Q453.2467790527344%2034.19200952148437%20459.37759619140627%2034.19200952148437Q465.5708076171875%2034.19200952148437%20470.18059619140627%2036.82841333007812Q474.790384765625%2039.464817138671876%20477.3565676269531%2044.254014282226564Q479.9227504882812%2049.04321142578125%20479.9227504882812%2055.6731923828125Q479.9227504882812%2062.1315771484375%20477.41116381835934%2066.84277905273439Q474.8995771484375%2071.55398095703126%20470.3131876220703%2074.05778857421876Q465.7267980957031%2076.56159619140625%20459.45558666992184%2076.56159619140625ZM459.3151923828125%2066.54656567382813Q462.90323046875%2066.54656567382813%20465.0716580810547%2064.98654663085938Q467.2400856933594%2063.426527587890625%20468.20730187988283%2060.907090454101564Q469.1745180664062%2058.387653320312495%20469.1745180664062%2055.57959619140625Q469.1745180664062%2052.7715390625%20468.20730187988283%2050.16630383300781Q467.2400856933594%2047.56106860351562%20465.09505712890626%2045.907453369140626Q462.95002856445313%2044.25383813476563%20459.3151923828125%2044.25383813476563Q455.75835620117186%2044.25383813476563%20453.5665295410156%2045.907453369140626Q451.3747028808594%2047.56106860351562%20450.40748669433594%2050.14290478515625Q449.4402705078125%2052.72474096679687%20449.4402705078125%2055.57959619140625Q449.4402705078125%2058.43445141601563%20450.43088574218746%2060.95388854980469Q451.42150097656247%2063.47332568359375%20453.58992858886717%2065.00994567871093Q455.75835620117186%2066.54656567382813%20459.3151923828125%2066.54656567382813Z%22%20fill%3D%22%23FFFFFF%22/%3E%0A%3C/svg%3E" alt="TrackAuto" width="220" height="44"><span class="logo__slogan">WE TRACK SUCCESS</span></a>
       <p>Український інтегратор телематичних рішень з 2010 року. З’єднуємо техніку, людей і рішення в одну зрозумілу систему.</p>
     </div>
     <div class="footer__col">
@@ -706,22 +780,22 @@ ul, ol { padding: 0; list-style: none; }
       transport: 'Вантажівки, спецтехніка, агротехніка',
       result: 'Кожна заправка й злив, витрата на маршрут і відхилення від норми.',
       kit: ['Трекер Teltonika з читанням CAN', 'Датчик рівня пального', 'Звіти Navixy: заправки, зливи, витрата'],
-      cta: { label: 'Розрахувати рішення', href: '#demo' } },
+      cta: { label: 'Отримати розрахунок', href: '#demo' } },
     { id: 'route', label: 'Маршрути та пробіг',
       transport: 'Легкові авто, фургони, кур’єри',
       result: 'Фактичний пробіг, маршрут і простої — без ручних звітів водіїв.',
       kit: ['Трекер Teltonika (OBD або пряме підключення)', 'Геозони й планові маршрути в Navixy', 'Щоденні звіти пробігу й простоїв'],
-      cta: { label: 'Розрахувати рішення', href: '#demo' } },
+      cta: { label: 'Отримати розрахунок', href: '#demo' } },
     { id: 'security', label: 'Безпека техніки',
       transport: 'Спецтехніка, причепи, прокатний парк',
       result: 'Сповіщення про рух поза графіком і вихід із дозволеної зони.',
       kit: ['Автономний трекер з акумулятором', 'Сповіщення про рух поза графіком', 'Геозони об’єктів і стоянок'],
-      cta: { label: 'Розрахувати рішення', href: '#demo' } },
+      cta: { label: 'Отримати розрахунок', href: '#demo' } },
     { id: 'field', label: 'Виїзні команди',
       transport: 'Сервісні бригади, мобільні працівники',
       result: 'Керівник бачить статуси й візити зі смартфона, команда — свої завдання.',
       kit: ['Мобільний застосунок або персональний трекер', 'Завдання та статуси в Navixy', 'Навігатори Garmin для роботи в полі'],
-      cta: { label: 'Розрахувати рішення', href: '#demo' } },
+      cta: { label: 'Отримати розрахунок', href: '#demo' } },
     { id: 'ready', label: 'Готовий комплект',
       transport: 'Малий бізнес, приватні клієнти',
       result: 'Купівля або оренда без проєкту впровадження — старт за три кроки.',
@@ -797,6 +871,13 @@ ul, ol { padding: 0; list-style: none; }
         if (bad) ok = false;
       });
       if (!ok) { say('Вкажіть ім’я та телефон, щоб ми могли зв’язатися.', true); return; }
+      var digits = phone.value.replace(/\D/g, '');
+      if (digits.length < 10 || digits.length > 13) {
+        phone.setAttribute('aria-invalid', 'true');
+        say('Перевірте номер — наприклад, +380 67 123 45 67.', true);
+        phone.focus();
+        return;
+      }
 
       var data = {
         industry: form.elements.industry.value,
@@ -816,7 +897,7 @@ ul, ol { padding: 0; list-style: none; }
         }).then(function (r) {
           if (!r.ok) throw new Error(r.status);
           form.reset();
-          say('Заявку надіслано. Ми зв’яжемося з вами найближчим часом.');
+          say('Дякуємо! Зазвичай ми передзвонюємо одразу, щойно отримуємо заявку.');
         }).catch(function () {
           say('Не вдалося надіслати заявку. Напишіть на office@trackauto.ua або зателефонуйте +38 044 451 66 17.', true);
         });
@@ -825,7 +906,7 @@ ul, ol { padding: 0; list-style: none; }
           '\nЗадача: ' + data.task + '\nІм’я: ' + data.name + '\nТелефон: ' + data.phone;
         window.location.href = 'mailto:office@trackauto.ua?subject=' +
           encodeURIComponent('Заявка на демо з сайту') + '&body=' + encodeURIComponent(body);
-        say('Відкрили лист у вашій пошті — залишилось натиснути «Надіслати».');
+        say('Ми відкрили лист у вашій пошті — залишилось натиснути «Надіслати». Якщо лист не відкрився, напишіть на office@trackauto.ua або зателефонуйте +38 044 451 66 17.');
       }
     });
   }
