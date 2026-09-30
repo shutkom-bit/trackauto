@@ -122,11 +122,24 @@ ul, ol { padding: 0; list-style: none; }
 /* ---------- header ---------- */
 .header { position: sticky; top: 0; z-index: 50; background: rgba(27, 34, 43, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-dark); }
 .header__row { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-.logo__mark { width: 44px; height: 38px; flex-shrink: 0; display: block; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo__mark { width: 52px; height: 46px; flex-shrink: 0; display: block; overflow: visible; }
+.lm-w1, .lm-w2 { fill: none; stroke: #3BA3F0; stroke-linecap: round; }
+.lm-w1 { stroke-width: 5.5; }
+.lm-w2 { stroke-width: 5.5; }
+.lm-dot { fill: #FFD500; filter: drop-shadow(0 0 6px rgba(255, 213, 0, .75)); }
+.lm-ping { fill: none; stroke: #FFD500; stroke-width: 2; opacity: 0; transform-origin: 32px 30px; }
+@keyframes lm-wave { 0%, 100% { opacity: .35; } 30% { opacity: 1; } }
+@keyframes lm-ping { 0% { opacity: .8; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(3.4); } }
+.lm-w1 { animation: lm-wave 2.4s ease-in-out infinite; animation-delay: .2s; }
+.lm-w2 { animation: lm-wave 2.4s ease-in-out infinite; animation-delay: .5s; }
+.lm-ping { animation: lm-ping 2.4s ease-out infinite; }
+.logo:hover .lm-w1, .logo:hover .lm-w2 { animation-duration: 1.2s; }
+@media (prefers-reduced-motion: reduce) { .lm-w1, .lm-w2, .lm-ping { animation: none; } .lm-w1, .lm-w2 { opacity: 1; } }
 .logo__text { display: flex; flex-direction: column; line-height: 1.2; }
-.logo__text b { font: 700 20px var(--f-display); color: var(--ivory); }
-.logo__text small { font: 11px var(--f-mono); letter-spacing: .14em; color: var(--text-dark-muted); }
+.logo__text b { font: 800 25px/1 var(--f-display); letter-spacing: -.03em; color: var(--ivory); }
+.logo__text b span { color: #3BA3F0; }
+.logo__text small { margin-top: 5px; font: 10.5px var(--f-mono); letter-spacing: .2em; color: var(--text-dark-muted); }
 
 .nav a, .nav__lang, .btn { white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: 24px; font-size: 15px; color: #D9DCD6; }
@@ -285,21 +298,6 @@ ul, ol { padding: 0; list-style: none; }
 .footer__col a:hover { color: var(--accent); }
 .footer__legal { padding-top: 24px; padding-bottom: 36px; border-top: 1px solid var(--slate); display: flex; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; font: 12px var(--f-mono); color: #8B938F; }
 
-/* ---------- супутні застосунки (ярлики, як у базі знань Hub) ---------- */
-.apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.app { border-radius: 16px; padding: 32px; color: #fff; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 24px; align-items: start; }
-.app--monitor { background: linear-gradient(135deg, #3B9BE0 0%, #2A68A6 100%); }
-.app--tracker { background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%); }
-.app__icon { width: 72px; height: 72px; border-radius: 16px; background: rgba(255,255,255,.16); display: grid; place-items: center; }
-.app__icon svg { width: 36px; height: 36px; fill: none; stroke: #fff; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.app__tag { display: inline-block; font: 500 11px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; background: rgba(255,255,255,.18); padding: 5px 10px; border-radius: 999px; }
-.app h3 { margin-top: 12px; font: 700 28px/1.15 var(--f-display); letter-spacing: -.02em; }
-.app__sub { margin-top: 4px; font: 14px var(--f-mono); color: rgba(255,255,255,.85); }
-.app__text { margin-top: 14px; font-size: 16px; color: rgba(255,255,255,.94); }
-.app__stores { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
-.app__stores a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,.45); background: rgba(255,255,255,.12); color: #fff; font: 600 14px var(--f-body); text-decoration: none; }
-.app__stores a:hover { background: rgba(255,255,255,.24); }
-
 /* ---------- застосунки у футері ---------- */
 .footer__apps { padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 16px 48px; }
 .footer__app { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
@@ -329,7 +327,6 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 @media (max-width: 860px) {
-  .apps { grid-template-columns: 1fr; }
   .section__head, .demo { grid-template-columns: 1fr; gap: 28px; }
   .doors { grid-template-columns: 1fr; }
   .door { min-height: 0; padding: 32px 28px; }
@@ -344,7 +341,6 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 @media (max-width: 600px) {
-  .app { grid-template-columns: 1fr; padding: 28px 24px; }
   .console { padding: 16px; }
   .console__body { grid-template-columns: 1fr; }
   .console__map { height: 240px; }
@@ -371,8 +367,8 @@ ul, ol { padding: 0; list-style: none; }
 <header class="header">
   <div class="wrap header__row">
     <a class="logo" href="#top" aria-label="TrackAuto — на головну">
-      <svg class="logo__mark" viewBox="6 5 52 45" aria-hidden="true"><path d="M24.29 39.19 A12 12 0 1 1 39.71 39.19" fill="none" stroke="#3BA3F0" stroke-width="5.5" stroke-linecap="round"/><path d="M17.86 46.85 A22 22 0 1 1 46.14 46.85" fill="none" stroke="#3BA3F0" stroke-width="5.5" stroke-linecap="round"/><circle cx="32" cy="30" r="6.5" fill="#FFD500"/></svg>
-      <span class="logo__text"><b>TrackAuto</b><small>CONNECTED OPERATIONS</small></span>
+      <svg class="logo__mark" viewBox="0 0 64 56" aria-hidden="true"><circle class="lm-ping" cx="32" cy="30" r="7"/><path class="lm-w1" d="M24.29 39.19 A12 12 0 1 1 39.71 39.19"/><path class="lm-w2" d="M17.86 46.85 A22 22 0 1 1 46.14 46.85"/><circle class="lm-dot" cx="32" cy="30" r="7"/></svg>
+      <span class="logo__text"><b>Track<span>Auto</span></b><small>CONNECTED OPERATIONS</small></span>
     </a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Відкрити меню">
@@ -541,54 +537,13 @@ ul, ol { padding: 0; list-style: none; }
   </div>
 </section>
 
-<!-- ============ APPS ============ -->
-<section id="apps" class="light">
-  <div class="wrap section section--tight-top">
-    <div class="section__head">
-      <div>
-        <p class="eyebrow eyebrow--teal">СУПУТНІ СЕРВІСИ / 03</p>
-        <h2 class="h2">Реагуйте й контролюйте звідусіль.</h2>
-      </div>
-      <p class="lead">Два безкоштовні застосунки на платформі Navixy доповнюють будь-яке рішення TrackAuto чи TIPSTER: один показує ваші об’єкти в телефоні, другий перетворює телефон співробітника на трекер.</p>
-    </div>
-    <div class="apps">
-      <article class="app app--monitor">
-        <span class="app__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 7.5h6M9 11h6M9 14.5h3.5"/><path d="M11 18.5h2"/></svg></span>
-        <div>
-          <span class="app__tag">Для керівника й диспетчера</span>
-          <h3>X-GPS Monitor</h3>
-          <p class="app__sub">Контролюйте автопарк з телефона</p>
-          <p class="app__text">Де транспорт зараз, що з ним відбувається і які події потребують уваги — з миттєвими сповіщеннями, навіть коли ви не за комп’ютером.</p>
-          <div class="app__stores">
-            <a href="https://apps.apple.com/us/app/x-gps-monitor/id883610994">App Store ↗</a>
-            <a href="https://play.google.com/store/apps/details?id=com.navixy.xgps.client.app">Google Play ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="app app--tracker">
-        <span class="app__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 15.5s3-3 3-5.2a3 3 0 0 0-6 0c0 2.2 3 5.2 3 5.2z"/><circle cx="12" cy="10.3" r="1"/><path d="M11 18.5h2"/></svg></span>
-        <div>
-          <span class="app__tag">Для польових співробітників</span>
-          <h3>X-GPS Tracker</h3>
-          <p class="app__sub">Мобільний співробітник — на зв’язку</p>
-          <p class="app__text">Перетворює смартфон на GPS-трекер: кур’єри, сервісні бригади й торгові представники видні на карті, передають статуси, фото й звіти про виконані завдання.</p>
-          <div class="app__stores">
-            <a href="https://apps.apple.com/app/x-gps-tracker/id1612047534">App Store ↗</a>
-            <a href="https://play.google.com/store/apps/details?id=com.navixy.xgps.tracker">Google Play ↗</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CONFIGURATOR ============ -->
 <section id="hardware" class="light light--flush">
   <div class="wrap section section--tight-top">
     <div class="config">
       <div class="config__head">
         <div>
-          <p class="eyebrow">ПІДБІР ОБЛАДНАННЯ / 04</p>
+          <p class="eyebrow">ПІДБІР ОБЛАДНАННЯ / 03</p>
           <h2 class="h2 h2--md">Що ви хочете контролювати?</h2>
         </div>
         <p class="muted-dark">Teltonika GPS, пристрої TIPSTER, Garmin. Точну конфігурацію підберемо після аудиту.</p>
@@ -608,7 +563,7 @@ ul, ol { padding: 0; list-style: none; }
 <!-- ============ INDUSTRIES ============ -->
 <section class="paper">
   <div class="wrap section">
-    <p class="eyebrow eyebrow--teal">ГАЛУЗІ / 05</p>
+    <p class="eyebrow eyebrow--teal">ГАЛУЗІ / 04</p>
     <h2 class="h2 h2--gap">Починаємо з вашої задачі.</h2>
     <div class="industries">
       <a href="#demo"><h3>Логістика</h3><p>Маршрути, простої, пальне й час доставки на одному екрані.</p></a>
@@ -628,7 +583,7 @@ ul, ol { padding: 0; list-style: none; }
   <div class="wrap section">
     <div class="section__head">
       <div>
-        <p class="eyebrow eyebrow--teal">ВПРОВАДЖЕННЯ / 06</p>
+        <p class="eyebrow eyebrow--teal">ВПРОВАДЖЕННЯ / 05</p>
         <h2 class="h2">Від запиту до щоденної роботи.</h2>
       </div>
       <p class="lead">Ми не зникаємо після монтажу: одна команда відповідає за систему, поки вона працює у вашому бізнесі.</p>
@@ -648,7 +603,7 @@ ul, ol { padding: 0; list-style: none; }
   <div class="wrap section">
     <div class="proof">
       <div>
-        <p class="eyebrow eyebrow--teal">ДОСВІД / 07</p>
+        <p class="eyebrow eyebrow--teal">ДОСВІД / 06</p>
         <h2 class="h2">Складне стає ясним.</h2>
       </div>
       <dl class="proof__nums">
@@ -672,7 +627,7 @@ ul, ol { padding: 0; list-style: none; }
 <section id="demo" class="slate">
   <div class="wrap section demo">
     <div class="stack stack--lg">
-      <p class="eyebrow">ДЕМО / 08</p>
+      <p class="eyebrow">ДЕМО / 07</p>
       <h2 class="h2 h2--xl">Ваші активи вже можуть говорити.</h2>
       <p class="lead lead--dark">Покажемо на реальних екранах Navixy, як диспетчер налаштує подію, звіт і дію саме для вашого процесу.</p>
     </div>
@@ -719,7 +674,7 @@ ul, ol { padding: 0; list-style: none; }
 <footer class="footer">
   <div class="wrap footer__grid">
     <div class="stack">
-      <a class="logo" href="#top"><svg class="logo__mark" viewBox="6 5 52 45" aria-hidden="true"><path d="M24.29 39.19 A12 12 0 1 1 39.71 39.19" fill="none" stroke="#3BA3F0" stroke-width="5.5" stroke-linecap="round"/><path d="M17.86 46.85 A22 22 0 1 1 46.14 46.85" fill="none" stroke="#3BA3F0" stroke-width="5.5" stroke-linecap="round"/><circle cx="32" cy="30" r="6.5" fill="#FFD500"/></svg><span class="logo__text"><b>TrackAuto</b><small>CONNECTED OPERATIONS</small></span></a>
+      <a class="logo" href="#top"><svg class="logo__mark" viewBox="0 0 64 56" aria-hidden="true"><circle class="lm-ping" cx="32" cy="30" r="7"/><path class="lm-w1" d="M24.29 39.19 A12 12 0 1 1 39.71 39.19"/><path class="lm-w2" d="M17.86 46.85 A22 22 0 1 1 46.14 46.85"/><circle class="lm-dot" cx="32" cy="30" r="7"/></svg><span class="logo__text"><b>Track<span>Auto</span></b><small>CONNECTED OPERATIONS</small></span></a>
       <p>Український інтегратор телематичних рішень з 2010 року. З’єднуємо техніку, людей і рішення в одну зрозумілу систему.</p>
     </div>
     <div class="footer__col">
@@ -742,7 +697,7 @@ ul, ol { padding: 0; list-style: none; }
       <span>м. Київ, вул. Білоруська, 30</span>
     </div>
   </div>
-  <div class="wrap footer__apps">
+  <div id="apps" class="wrap footer__apps">
     <div class="footer__app">
       <span class="footer__app-name"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span><b>X-GPS Monitor</b><small>для керівника й диспетчера</small></span></span>
       <a class="store" href="https://apps.apple.com/us/app/x-gps-monitor/id883610994" aria-label="X-GPS Monitor в App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>App Store</a>
