@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrackAuto — телематика для бізнесу: Navixy, Teltonika GPS, Garmin</title>
+<meta name="description" content="TrackAuto — інтегратор телематики для бізнесу з 2010 року. Платформа Navixy, обладнання Teltonika GPS і навігація Garmin з впровадженням і підтримкою в Україні. 4000+ підключених об’єктів.">
+<meta property="og:title" content="TrackAuto — Усе, що рухається. Під контролем.">
+<meta property="og:description" content="Телематика для автопарків, техніки й мобільних команд: Navixy, Teltonika GPS, Garmin. Впровадження та підтримка в Україні.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta name="theme-color" content="#1B222B">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap header__row">
+    <a class="logo" href="#top" aria-label="TrackAuto — на головну">
+      <span class="logo__mark">TA</span>
+      <span class="logo__text"><b>trackauto</b><small>CONNECTED OPERATIONS</small></span>
+    </a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav" class="nav" aria-label="Основна навігація">
+      <a href="#entry">Для бізнесу</a>
+      <a href="#platform">Платформа Navixy</a>
+      <a href="#hardware">Обладнання</a>
+      <a href="https://tipster.ua/">TIPSTER</a>
+      <a href="#apps">Застосунки</a>
+      <a href="https://hub.tipster.ua/">Партнерам</a>
+      <span class="nav__lang"><b>UA</b> / <a href="#" aria-label="English version (незабаром)">EN</a></span>
+      <a class="btn btn--accent" href="https://www.tagps.com.ua/">Увійти в TAGPS <svg class="ico" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero wrap">
+  <div class="hero__copy">
+    <p class="eyebrow">TRACKAUTO / З 2010 РОКУ</p>
+    <h1 class="hero__title">Усе, що рухається.<br><span class="accent-text">Під контролем.</span></h1>
+    <p class="hero__lead">Інтегратор телематики для бізнесу: платформа Navixy, обладнання Teltonika GPS і навігація Garmin — з впровадженням і підтримкою в Україні.</p>
+    <div class="btn-row">
+      <a class="btn btn--accent btn--lg" href="#demo">Отримати демо <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a class="btn btn--ghost btn--lg" href="#entry">Знайти готове рішення</a>
+    </div>
+  </div>
+
+  <div class="console" aria-label="Приклад інтерфейсу диспетчерської">
+    <div class="console__bar">
+      <span>NAVIXY / ДИСПЕТЧЕРСЬКА</span>
+      <span class="status"><i></i>ДЕМО-ЕКРАН</span>
+    </div>
+    <div class="console__body">
+      <div class="console__map">
+        <svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Карта з маршрутом, геозоною та трьома об’єктами">
+          <rect width="400" height="330" fill="#243039"/>
+          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80 M120 -20 L180 350 M260 -20 L330 350 M-20 290 L200 350" stroke="#33414B" stroke-width="12" fill="none"/>
+          <path d="M-20 60 L420 300 M-20 200 L300 -20 M60 350 L420 80" stroke="#3E4D57" stroke-width="2" fill="none"/>
+          <circle cx="300" cy="120" r="54" fill="none" stroke="#F4F1EA" stroke-opacity=".5" stroke-width="1.2" stroke-dasharray="5 5"/>
+          <path class="route" d="M60 250 C 140 180, 200 150, 300 120" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+          <g class="pin"><circle cx="60" cy="250" r="14"/><circle cx="60" cy="250" r="6"/></g>
+          <g class="pin"><circle cx="190" cy="165" r="14"/><circle cx="190" cy="165" r="6"/></g>
+          <g class="pin"><circle cx="300" cy="120" r="14"/><circle cx="300" cy="120" r="6"/></g>
+          <text x="16" y="314" fill="#A9B0AE" font-size="11" font-family="IBM Plex Mono, monospace">геозона «Склад» / маршрут у роботі</text>
+        </svg>
+      </div>
+      <ul class="events" aria-label="Останні події">
+        <li class="events__title">ПОДІЇ</li>
+        <li><b class="accent-text">Злив пального</b><span>Трактор 12</span></li>
+        <li><b>В’їзд у геозону</b><span>Вантажівка 01</span></li>
+        <li><b>Простій понад норму</b><span>Фургон 04</span></li>
+        <li><b>Плановий сервіс</b><span>Причіп 07</span></li>
+      </ul>
+    </div>
+    <dl class="kpis">
+      <div><dt>4000+</dt><dd>підключених об’єктів</dd></div>
+      <div><dt>2010</dt><dd>працюємо з цього року</dd></div>
+      <div><dt>24/7</dt><dd>підтримка клієнтів</dd></div>
+    </dl>
+    <p class="console__note">Ілюстрація інтерфейсу. Замініть на реальний скриншот Navixy.</p>
+  </div>
+</section>
+
+<!-- ============ BAND ============ -->
+<section class="band">
+  <div class="wrap band__row">
+    <p class="band__text">П’ять входів. Одна логіка: бачити, розуміти, діяти.</p>
+    <p class="mono">TRACKAUTO ECOSYSTEM / 2026</p>
+  </div>
+</section>
+
+<!-- ============ ENTRANCES ============ -->
+<section id="entry" class="light">
+  <div class="wrap section">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow eyebrow--teal">ПОЧНІТЬ ТУТ / 00</p>
+        <h2 class="h2">З якого боку ви заходите?</h2>
+      </div>
+      <p class="lead">Не треба розбиратися в телематиці, щоб почати. Скажіть, що вам потрібно, — ми покажемо короткий шлях.</p>
+    </div>
+
+    <div class="doors">
+      <a id="business" class="door door--accent" href="#demo">
+        <span class="door__num">01 / TRACKAUTO</span>
+        <span class="door__title">Я керую бізнесом</span>
+        <span class="door__text">Автопарк, спецтехніка, логістика чи склад — зберемо систему під вашу операцію.</span>
+        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
+      </a>
+      <a class="door door--paper" href="https://tipster.ua/">
+        <span class="door__num">02 / TIPSTER</span>
+        <span class="door__title">Мені потрібен готовий продукт</span>
+        <span class="door__text">Трекер, підписка або оренда — без довгого проєкту впровадження.</span>
+        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
+      </a>
+      <a class="door door--dark" href="https://www.tagps.com.ua/">
+        <span class="door__num">03 / TAGPS</span>
+        <span class="door__title">Я хочу бачити техніку зараз</span>
+        <span class="door__text">Клієнтський портал TAGPS: увійдіть і перевірте, що відбувається з вашими об’єктами.</span>
+        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
+      </a>
+      <a id="apps" class="door door--dark" href="#demo">
+        <span class="door__num">04 / ЗАСТОСУНКИ</span>
+        <span class="door__title">Мені потрібен застосунок</span>
+        <span class="door__text">Для власника, польового працівника або мобільного моніторингу. <!-- TODO: посилання на App Store / Google Play --></span>
+        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
+      </a>
+      <a class="door door--paper" href="https://hub.tipster.ua/">
+        <span class="door__num">05 / HUB TIPSTER</span>
+        <span class="door__title">Я розвиваю партнерський бізнес</span>
+        <span class="door__text">Каталог, партнерські ціни, замовлення й документи для дилерів у закритому порталі.</span>
+        <span class="door__arrow" aria-hidden="true"><svg class="ico" viewBox="0 0 14 14"><path d="M3 11L11 3M5 3h6v6"/></svg></span>
+      </a>
+      <a class="door door--dashed" href="#demo">
+        <span class="door__title door__title--sm">Не знаєте, з чого почати?</span>
+        <span class="door__text">Опишіть задачу — інженер TrackAuto запропонує маршрут.</span>
+        <b>Написати нам →</b>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT CONNECTS ============ -->
+<section class="dark">
+  <div class="wrap section split">
+    <div class="split__side">
+      <p class="eyebrow">ЯК ЦЕ ПРАЦЮЄ / 01</p>
+      <h2 class="h2 h2--xl">Не ще один сервіс. Система.</h2>
+      <p class="lead lead--dark">Три бренди-партнери й одна команда, яка відповідає за результат. Кожен наступний крок логічно продовжує попередній.</p>
+    </div>
+    <ol class="chain">
+      <li><span class="chain__n">01</span><span><b>Зібрати дані з поля</b><small>Трекери, CAN, OBD, пальне, температура, відео, BLE</small></span><span class="chain__tag">TELTONIKA GPS</span></li>
+      <li><span class="chain__n">02</span><span><b>Перетворити дані на рішення</b><small>Карта, події, геозони, звіти, API</small></span><span class="chain__tag">NAVIXY</span></li>
+      <li><span class="chain__n">03</span><span><b>Команди, які працюють синхронно</b><small>Диспетчер, керівник, водій, сервісна група</small></span><span class="chain__tag">ВАША КОМАНДА</span></li>
+      <li><span class="chain__n">04</span><span><b>Навігація для людей у дорозі</b><small>Авто-, мото- та портативні навігатори</small></span><span class="chain__tag">GARMIN</span></li>
+      <li><span class="chain__n">05</span><span><b>Підтримка, коли вона справді потрібна</b><small>Аудит, монтаж, налаштування, навчання, розвиток</small></span><span class="chain__tag accent-text">TRACKAUTO</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PLATFORM / ROLES ============ -->
+<section id="platform" class="light">
+  <div class="wrap section">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow eyebrow--teal">ПЛАТФОРМА NAVIXY / 02</p>
+        <h2 class="h2">Одна карта операцій. Кожен бачить своє.</h2>
+      </div>
+      <div class="stack">
+        <p class="lead">Від першого запиту до щоденного використання — без розриву між продавцем, інтегратором і користувачем.</p>
+        <a class="btn btn--outline" href="#demo">Подивитися product tour</a>
+      </div>
+    </div>
+    <div class="roles">
+      <article><p class="mono muted">РОЛЬ / 01</p><h3>Власник / CEO</h3><p>Бачить, де втрачаються гроші: зайвий пробіг, простій, пальне, порушення, незапланований сервіс.</p></article>
+      <article><p class="mono muted">РОЛЬ / 02</p><h3>Керівник автопарку</h3><p>Збирає флот на одному екрані, налаштовує події, звіти, геозони й техобслуговування.</p></article>
+      <article><p class="mono muted">РОЛЬ / 03</p><h3>Диспетчер</h3><p>Реагує на відхилення в реальному часі, передає завдання, контролює маршрут і статус.</p></article>
+      <article><p class="mono muted">РОЛЬ / 04</p><h3>ІТ / інтегратор</h3><p>Підключає дані до CRM/ERP через API, кастомізує логіку й масштабує рішення.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIGURATOR ============ -->
+<section id="hardware" class="light light--flush">
+  <div class="wrap section section--tight-top">
+    <div class="config">
+      <div class="config__head">
+        <div>
+          <p class="eyebrow">ПІДБІР ОБЛАДНАННЯ / 03</p>
+          <h2 class="h2 h2--md">Що ви хочете контролювати?</h2>
+        </div>
+        <p class="muted-dark">Teltonika GPS, пристрої TIPSTER, Garmin. Точну конфігурацію підберемо після аудиту.</p>
+      </div>
+      <div class="chips" role="tablist" aria-label="Задача">
+        <!-- кнопки створює assets/main.js з масиву TASKS -->
+      </div>
+      <div class="config__grid" aria-live="polite">
+        <div><p class="mono muted-dark">ТРАНСПОРТ</p><p class="config__transport" data-field="transport"></p><p class="muted-dark" data-field="result"></p></div>
+        <div><p class="mono muted-dark">КОМПЛЕКТ</p><ul class="kit" data-field="kit"></ul></div>
+        <div class="config__cta"><p class="mono muted-dark">НАСТУПНИЙ КРОК</p><a class="btn btn--accent" data-field="cta" href="#demo">Розрахувати рішення</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section class="paper">
+  <div class="wrap section">
+    <p class="eyebrow eyebrow--teal">ГАЛУЗІ / 04</p>
+    <h2 class="h2 h2--gap">Починаємо з вашої задачі.</h2>
+    <div class="industries">
+      <a href="#demo"><h3>Логістика</h3><p>Маршрути, простої, пальне й час доставки на одному екрані.</p></a>
+      <a href="#demo"><h3>Агро</h3><p>Техніка в полі, оброблені площі, заправки й зливи.</p></a>
+      <a href="#demo"><h3>Будівництво</h3><p>Мотогодини спецтехніки, робота на об’єктах, безпека.</p></a>
+      <a href="#demo"><h3>Сервісні команди</h3><p>Виїзні бригади, завдання, статуси й звіти по візитах.</p></a>
+      <a href="#demo"><h3>Комунальні служби</h3><p>Прибирання, вивіз, ремонтні служби — контроль виконання.</p></a>
+      <a href="#demo"><h3>Прокат</h3><p>Де авто чи техніка зараз і як їх використовують клієнти.</p></a>
+      <a href="#demo"><h3>Мото й аутдор</h3><p>Мототехніка, портативні навігатори Garmin, персональні трекери.</p></a>
+      <a href="#demo" class="industries__cta"><h3>Не бачите свою галузь?</h3><b>Опишіть задачу →</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="light">
+  <div class="wrap section">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow eyebrow--teal">ВПРОВАДЖЕННЯ / 05</p>
+        <h2 class="h2">Від запиту до щоденної роботи.</h2>
+      </div>
+      <p class="lead">Ми не зникаємо після монтажу: одна команда відповідає за систему, поки вона працює у вашому бізнесі.</p>
+    </div>
+    <ol class="process">
+      <li><span>01 / аудит</span><b>Процеси, транспорт і цілі розібрано</b><em>READY</em></li>
+      <li><span>02 / підбір</span><b>Комплект обладнання підібрано під задачу</b><em>MATCHED</em></li>
+      <li><span>03 / монтаж</span><b>Монтаж, налаштування подій, звітів і геозон</b><em>LIVE</em></li>
+      <li><span>04 / навчання</span><b>Диспетчери, керівники й водії працюють у системі</b><em>ONBOARDED</em></li>
+      <li><span>05 / підтримка</span><b>Ви бачите, контролюєте, дієте — ми супроводжуємо</b><em>24 / 7</em></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="paper">
+  <div class="wrap section">
+    <div class="proof">
+      <div>
+        <p class="eyebrow eyebrow--teal">ДОСВІД / 06</p>
+        <h2 class="h2">Складне стає ясним.</h2>
+      </div>
+      <dl class="proof__nums">
+        <div><dt>2010</dt><dd>рік, з якого ми працюємо в телематиці</dd></div>
+        <div><dt>4000+</dt><dd>об’єктів підключено до моніторингу</dd></div>
+        <div><dt>Garmin</dt><dd>офіційний дилер в Україні</dd></div>
+      </dl>
+    </div>
+    <!-- TODO: замініть заглушки реальними кейсами -->
+    <div class="cases">
+      <article><p class="mono muted">КЕЙС / ЛОГІСТИКА</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
+      <article><p class="mono muted">КЕЙС / АГРО</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
+      <article><p class="mono muted">КЕЙС / СЕРВІС</p><p class="cases__kpi">[KPI]</p><b>[Назва клієнта] · [кількість ТЗ]</b><p class="muted">[Що змінилося після впровадження — одним реченням]</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO FORM ============ -->
+<section id="demo" class="slate">
+  <div class="wrap section demo">
+    <div class="stack stack--lg">
+      <p class="eyebrow">ДЕМО / 07</p>
+      <h2 class="h2 h2--xl">Ваші активи вже можуть говорити.</h2>
+      <p class="lead lead--dark">Покажемо на реальних екранах Navixy, як диспетчер налаштує подію, звіт і дію саме для вашого процесу.</p>
+    </div>
+
+    <!--
+      Форма за замовчуванням відкриває лист на office@trackauto.ua.
+      Щоб заявки надходили напряму, вкажіть адресу обробника в data-endpoint
+      (наприклад, Formspree: https://formspree.io/f/XXXX). Див. README.md.
+    -->
+    <form class="form" id="demo-form" data-endpoint="" novalidate>
+      <div class="form__row">
+        <label>ГАЛУЗЬ
+          <select name="industry">
+            <option>Логістика</option><option>Агро</option><option>Будівництво</option><option>Сервісні команди</option><option>Комунальні служби</option><option>Прокат</option><option>Мото й аутдор</option><option>Інше</option>
+          </select>
+        </label>
+        <label>КІЛЬКІСТЬ ТЗ
+          <input type="number" name="units" min="1" placeholder="Напр., 25">
+        </label>
+      </div>
+      <label>ГОЛОВНА ЗАДАЧА
+        <select name="task">
+          <option>Контроль пального</option><option>Маршрути та пробіг</option><option>Безпека техніки</option><option>Виїзні працівники</option><option>Інтеграція з CRM/ERP</option><option>Готовий комплект</option>
+        </select>
+      </label>
+      <div class="form__row">
+        <label>ІМ’Я
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>ТЕЛЕФОН
+          <input type="tel" name="phone" autocomplete="tel" placeholder="+380" required>
+        </label>
+      </div>
+      <button class="btn btn--accent btn--block" type="submit">Надіслати заявку</button>
+      <p class="form__msg" role="status" aria-live="polite"></p>
+      <p class="form__alt">Або одразу: <a href="mailto:office@trackauto.ua">office@trackauto.ua</a> · <a href="tel:+380444516617">+38 044 451 66 17</a></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="stack">
+      <a class="logo" href="#top"><span class="logo__mark">TA</span><span class="logo__text"><b>trackauto</b><small>CONNECTED OPERATIONS</small></span></a>
+      <p>Український інтегратор телематичних рішень з 2010 року. З’єднуємо техніку, людей і рішення в одну зрозумілу систему.</p>
+    </div>
+    <div class="footer__col">
+      <p class="eyebrow">ЕКОСИСТЕМА</p>
+      <a href="#entry">TrackAuto для бізнесу</a>
+      <a href="#platform">Платформа Navixy</a>
+      <a href="#hardware">Обладнання</a>
+      <a href="#apps">Мобільні застосунки</a>
+    </div>
+    <div class="footer__col">
+      <p class="eyebrow">ВХІД</p>
+      <a href="https://www.tagps.com.ua/">Клієнтський портал TAGPS ↗</a>
+      <a href="https://hub.tipster.ua/">Partner Hub ↗</a>
+      <a href="https://tipster.ua/">Магазин TIPSTER ↗</a>
+    </div>
+    <div class="footer__col">
+      <p class="eyebrow">ПОРУЧ</p>
+      <a href="mailto:office@trackauto.ua">office@trackauto.ua</a>
+      <a href="tel:+380444516617">+38 044 451 66 17</a>
+      <span>м. Київ, вул. Білоруська, 30</span>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <span>© <span id="year">2026</span> ТОВ «ТРЕКАВТО» · ЄДРПОУ 38872343</span>
+    <span>Офіційний дилер Garmin в Україні через ТОВ «НАВІОНІКА» · Navixy · Teltonika GPS</span>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
